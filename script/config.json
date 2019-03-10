@@ -1,0 +1,20 @@
+{
+
+"samplingFrequency":128,
+"numberOfChannels":14,
+"bands":[1,4,8,12,30],
+"windowSize":10,
+"highcut":45.0,
+"lowcut":1.0,
+
+"preprocessed_dataV1":"preprocessed_dataV1/",
+"preprocessed_dataV2":"preprocessed_dataV2/",
+"dataFeatures":"dataFeatures/",
+"objectPath":"../objects/",
+"dataPath":"../dataset/",
+
+"channels":["AF3", "F7", "F3", "FC5","T7","P7","O1",
+           "O2","P8", "T8","FC6","F4", "F8", "AF4"]
+
+
+}
