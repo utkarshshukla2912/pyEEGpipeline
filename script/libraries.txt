@@ -1,25 +1,20 @@
 from sklearn.decomposition import FastICA
 from scipy.signal import butter, lfilter
-import matplotlib.pyplot as plt
-import scipy.signal as sps
-from tqdm import tqdm
-import numpy as np
-import mne.io
-import glob
-import json
-import mne
-import os
 from multiprocessing import Pool
 import matplotlib.pyplot as plt
+import scipy.signal as sps
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
 import warnings
 import logging
+import mne.io
 import pyeeg
 import nolds
-import math
-import pywt
 import json
 import glob
+import math
+import pywt
+import mne
 import csv
+import os
