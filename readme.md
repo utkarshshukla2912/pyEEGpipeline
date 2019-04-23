@@ -20,8 +20,7 @@
     ├── preProcessedData/
     |   ├── datafile2.npy
     |   └── datafile2.npy
-    └── preProcessedData/
-        ├── channel_split_features.csv
-        └── channel_specific.csv
+    └── dataFeatures/
+        └── featureExtracted.csv
 
 ```
