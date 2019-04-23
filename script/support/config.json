@@ -4,19 +4,22 @@
 "numberOfChannels":4,
 "bands":[1,4,8,12,30],
 "fileType":"csv",
-"windowSize":10,
+"windowSize":3,
 "highcut":45.0,
 "lowcut":1.0,
 
+"dataPath":"/Users/utkarsh_1/Desktop/temp/",
 "preProcessedData":"preProcessedData/",
 "dataFeatures":"dataFeatures/",
 "objectPath":"../objects/",
-"dataPath":"/Users/utkarsh_1/Desktop/temp/",
 
 
-
+"classifiersToTrain": ["DecisionTree"],
+"featureExtracted":"featureExtracted.csv",
 "channels": ["AF3", "F7", "F3", "FC5"],
-
-"featureExtracted":"featureExtracted.csv"
+"classToClassify": "all",
+"applyPCA": ["y" , 10],
+"channelsToUse":"all",
+"applyScaling": "y"
 
 }

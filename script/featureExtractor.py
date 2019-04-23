@@ -22,7 +22,7 @@ class featureExtractor:
 
 	def __init__(self):
 
-		with open('../script/config.json') as f:
+		with open('support/config.json') as f:
 			config = json.load(f)
 
 		self.preProcessedData = config['preProcessedData']
@@ -122,20 +122,22 @@ class featureExtractor:
 		return [features,headers]
 
 	def getFeatures(self):
-		files = glob.glob(self.objectPath+self.preprocessed_dataV1+'*.npy')
+		files = glob.glob(self.objectPath+self.preProcessedData+'*.npy')
 		split_length = None
-		if self.windowSize != None:
+
+		if self.windowSize != "None":
 			split_length = self.windowSize * self.samplingFrequency
+
 		split_based = open(self.objectPath+self.dataFeatures+self.featureExtracted, 'w', newline='')
 		writer = csv.writer(split_based, delimiter=',')
 		header_writen = False
 		for file in tqdm(files):
 			file_split = file.split('_')
-			recording_class = file_split[1]
+			recording_class = file_split[2]
 			recording = np.load(file)
 			i = 0
 			for channel in tqdm(recording):
-				if self.windowSize == None:
+				if self.windowSize == "None":
 					split_length = len(channel)
 				limit = int(len(channel)/split_length)*split_length
 				channel = channel[0:limit]
@@ -162,6 +164,6 @@ class featureExtractor:
 
 
 
-featureExtractor().fetchData()
+#featureExtractor().getFeatures()
 
 #done

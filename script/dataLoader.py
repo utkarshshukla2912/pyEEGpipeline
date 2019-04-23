@@ -20,7 +20,7 @@ class dataLoader:
 
     def __init__(self):
 
-        with open('config.json') as f:
+        with open('support/config.json') as f:
             config = json.load(f)
 
         self.samplingFrequency = config['samplingFrequency']
